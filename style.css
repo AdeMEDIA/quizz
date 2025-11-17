@@ -1,0 +1,96 @@
+cat <<EOF > style.css
+/* Basic styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* The main box holding the quiz */
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Styling for each individual question */
+.question {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+/* Styling for the list of answers (options) */
+.answers {
+    margin-bottom: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Styling for each answer label */
+.answers label {
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.answers label:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style for when an answer is selected */
+.answers input[type="radio"]:checked + label {
+    background-color: #e0e8f9;
+    border-color: #007bff;
+}
+
+/* Hide the actual radio button */
+.answers input[type="radio"] {
+    display: none;
+}
+
+/* Styling for the submit button */
+#submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the results message */
+#results {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+EOF
