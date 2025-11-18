@@ -4,31 +4,31 @@
     // You can easily add more questions here!
     const myQuestions = [
         {
-            question: "What is the capital of France?",
+            question: "Fungi are important producers",
             answers: {
-                a: "Berlin",
-                b: "Madrid",
-                c: "Paris"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which language is this script written in?",
-            answers: {
-                a: "Python",
-                b: "JavaScript",
-                c: "Java"
+                a: "True",
+                b: "False",
+                c: "None"
             },
             correctAnswer: "b"
         },
         {
-            question: "What does HTML stand for?",
+            question: "Reproduction in both plants and animals is of two types namely _____ and  _____",
             answers: {
-                a: "Hyper Text Markup Language",
-                b: "High Tech Modern Language",
-                c: "Hyperlink and Text Markup Language"
+                a: "Asexual/sexual",
+                b: "Sexual/binary fission",
+                c: "Dad/Mum"
             },
             correctAnswer: "a"
+        },
+        {
+            question: "_____ is the power house of the cell",
+            answers: {
+                a: "Cell membranee",
+                b: "Medivine",
+                c: "Mitochondria"
+            },
+            correctAnswer: "c"
         }
     ];
 
