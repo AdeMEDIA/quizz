@@ -4,7 +4,7 @@
     // You can easily add more questions here!
     const myQuestions = [
         {
-            question: "Fungi are important producers",
+            question: "1. Fungi are important producers",
             answers: {
                 a: "True",
                 b: "False",
@@ -13,7 +13,7 @@
             correctAnswer: "b"
         },
         {
-            question: "Reproduction in both plants and animals is of two types namely _____ and  _____",
+            question: "2. Reproduction in both plants and animals is of two types namely _____ and  _____",
             answers: {
                 a: "Asexual/sexual",
                 b: "Sexual/binary fission",
@@ -22,7 +22,7 @@
             correctAnswer: "a"
         },
         {
-            question: "_____ is the power house of the cell",
+            question: "3. _____ is the power house of the cell",
             answers: {
                 a: "Cell membranee",
                 b: "Medivine",
