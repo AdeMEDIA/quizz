@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIO101 QUIZ</title>
+    <title>100L Quiz App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="quiz-container">
-        <h1>Bio101 Brainstormiing Quiz</h1>
-        
-        <div id="quiz"></div>
-        
-        <button id="submit">Submit</button>
-        
-        <div id="results"></div>
+    <nav class="navbar">
+        <div class="logo">MLS Quiz</div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <div class="side-menu" id="side-menu">
+        <a href="#" class="menu-link" data-target="home">Home</a>
+        <a href="#" class="menu-link" data-target="bio101">BIO 101</a>
+        <a href="#" class="menu-link" data-target="chm101">CHM 101</a>
+        <a href="#" class="menu-link" data-target="phy101">PHY 101</a>
     </div>
+
+    <div class="container">
+        
+        <section id="home" class="page active">
+            <h1>Brainstorming Quiz</h1>
+            <p>Select a course from the menu to start.</p>
+        </section>
+
+        <section id="bio101" class="page">
+            <h2>BIO 101 Quiz</h2>
+            <div class="quiz-container" id="quiz-bio">
+                <p class="question-text">Loading BIO Questions...</p>
+                <div class="options"></div>
+                <button class="next-btn" onclick="nextQuestion('bio')">Next</button>
+            </div>
+        </section>
+
+        <section id="chm101" class="page">
+            <h2>CHM 101 Quiz</h2>
+            <div class="quiz-container" id="quiz-chm">
+                <p class="question-text">Loading CHM Questions...</p>
+                <div class="options"></div>
+                <button class="next-btn" onclick="nextQuestion('chm')">Next</button>
+            </div>
+        </section>
+
+        <section id="phy101" class="page">
+            <h2>PHY 101 Quiz</h2>
+            <div class="quiz-container" id="quiz-phy">
+                <p class="question-text">Loading PHY Questions...</p>
+                <div class="options"></div>
+                <button class="next-btn" onclick="nextQuestion('phy')">Next</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; Made by MLS100lvl 2025/25</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -1,112 +1,122 @@
-/* Basic styling for the whole page */
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    /* This is the new light green background */
-    background-color: #f0f7f4;
-    color: #333;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Hamburger Button (The 3 lines) */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+}
+
+.line {
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0; /* Hidden initially */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu.open {
+    width: 250px; /* Width when open */
+}
+
+/* Main Content */
+.container {
+    padding: 20px;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* The main box holding the quiz */
-.quiz-container {
-    background-color: #ffffff;
-    /* Made the corners rounder */
-    border-radius: 16px;
-    /* Softened the shadow to match */
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
-    padding: 32px;
-    width: 90%;
-    max-width: 600px;
-}
-
-/* Removed the blue <h1> styling */
-h1 {
-    font-size: 1.5em;
-    font-weight: 600;
     text-align: center;
-    color: #333;
-    margin-bottom: 24px;
 }
 
-/* Styling for each individual question */
-.question {
-    /* This is the dark green question text */
-    color: #225740;
-    font-weight: bold;
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    line-height: 1.5; /* Added spacing for longer questions */
-}
-
-/* Styling for the list of answers (options) */
-.answers {
-    margin-bottom: 20px;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-/* Styling for each answer label */
-.answers label {
-    display: block;
-    padding: 16px;
-    /* This is the light grey default background */
-    background-color: #f8f9fa;
-    /* Removed the border */
-    border: none;
-    /* Made corners rounder */
-    border-radius: 12px;
-    margin-bottom: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.answers label:hover {
-    /* A slightly darker hover color */
-    background-color: #f1f3f5;
-}
-
-/* Style for when an answer is selected */
-.answers input[type="radio"]:checked + label {
-    /* This is the new yellow background for selected answers */
-    background-color: #fdd85d;
-    color: #333;
-    border-color: transparent; /* Make sure no border shows */
-}
-
-/* Hide the actual radio button */
-.answers input[type="radio"] {
-    display: none;
-}
-
-/* Styling for the submit button */
-#submit {
-    display: block;
+/* Pages Logic */
+.page {
+    display: none; /* Hide all pages by default */
     width: 100%;
-    padding: 16px;
-    /* Using a dark green to match the theme */
-    background-color: #225740;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.page.active {
+    display: block; /* Show only the active page */
+}
+
+/* Quiz Styling */
+.next-btn {
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 12px;
-    font-size: 1.1em;
-    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 15px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    border-radius: 5px;
 }
 
-#submit:hover {
-    background-color: #1a4331;
+.next-btn:hover {
+    background-color: #0056b3;
 }
 
-/* Styling for the results message */
-#results {
-    margin-top: 24px;
-    font-size: 1.2em;
-    font-weight: bold;
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: auto;
 }
