@@ -27,10 +27,34 @@
 
     <div class="container">
         
-        <section id="home" class="page active">
-            <h1>Brainstorming Quiz</h1>
-            <p>Select a course from the menu to start.</p>
-        </section>
+
+	<section id="login-screen" class="page active">
+    		<div class="login-header">Quiz App</div>
+    
+   			 <div class="login-card">
+       			 <h2>Welcome</h2>
+       			 <p>Please enter your name</p>
+        
+       	 	<form id="login-form">
+            	<input type="text" id="username-input" placeholder="Name" required>
+            		<button type="submit" id="start-button">LOGIN</button>
+       	 	</form>
+    		</div>
+    
+   		 <div class="toast-message">Welcome Back Dude</div>
+	</section>
+
+
+	<section id="subject-screen" class="page">
+    		<div class="subject-selection-container">
+        		<h2>Select a Course</h2>
+        	<div class="subject-buttons">
+            		<button class="subject-btn" data-subject="chm101">CHM 101</button>
+            		<button class="subject-btn" data-subject="bio101">BIO 101</button>
+            		<button class="subject-btn" data-subject="phy101">PHY 101</button>
+        	</div>
+    		</div>
+	</section>
 
         <section id="bio101" class="page">
             <h2>BIO 101 Quiz</h2>
